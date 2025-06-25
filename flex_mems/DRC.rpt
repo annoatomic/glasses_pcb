@@ -1,0 +1,40 @@
+** Drc report for flex_mems.kicad_pcb **
+** Created on 2025-06-24T11:26:35+0200 **
+
+** Found 6 DRC violations **
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,2500 mm; tatsächlich 0,2100 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(363,8000 mm, 67,5000 mm): NPTH-Pad von MK5
+    @(363,8000 mm, 66,6900 mm): Pad 5 [GND] von MK5 auf F.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,2500 mm; tatsächlich 0,2100 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(203,5000 mm, 67,5000 mm): NPTH-Pad von MK3
+    @(203,5000 mm, 66,6900 mm): Pad 5 [GND] von MK3 auf F.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,2500 mm; tatsächlich 0,2100 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(158,6000 mm, 67,3070 mm): NPTH-Pad von MK2
+    @(158,6000 mm, 66,4970 mm): Pad 5 [GND] von MK2 auf F.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,2500 mm; tatsächlich 0,2100 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(465,5000 mm, 67,3100 mm): NPTH-Pad von MK6
+    @(465,5000 mm, 66,5000 mm): Pad 5 [GND] von MK6 auf F.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,2500 mm; tatsächlich 0,2100 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(48,1000 mm, 67,3070 mm): NPTH-Pad von MK1
+    @(48,1000 mm, 66,4970 mm): Pad 5 [GND] von MK1 auf F.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,2500 mm; tatsächlich 0,2100 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(303,0000 mm, 107,7750 mm): NPTH-Pad von MK4
+    @(303,0000 mm, 106,9650 mm): Pad 5 [GND] von MK4 auf F.Cu
+
+** Found 0 unconnected pads **
+
+** Found 3 Footprint errors **
+[missing_footprint]: Fehlender Footprint TP1 (TestPoint)
+    Local override; warning
+[missing_footprint]: Fehlender Footprint TP2 (TestPoint)
+    Local override; warning
+[missing_footprint]: Fehlender Footprint TP3 (TestPoint)
+    Local override; warning
+
+** End of Report **
