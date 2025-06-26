@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "mux")(type "KiCad")(uri "C:/Users/leona/OneDrive/SoSe25/BA/PCB/ADAU7118ACPZRL/mux.kicad_sym")(options "")(descr ""))
+  (lib (name "header")(type "KiCad")(uri "C:/Users/leona/OneDrive/SoSe25/BA/PCB/10164228_0101A1RLF(Header)/header.kicad_sym")(options "")(descr ""))
+  (lib (name "ADPL44002AUJZ-1.8")(type "KiCad")(uri "C:/Users/leona/OneDrive/SoSe25/BA/PCB/ADPL44002AUJZ-1.8/ADPL44002AUJZ-1.8.kicad_sym")(options "")(descr ""))
+)

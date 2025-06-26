@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ADPL44002AUJZ-1.8-R7
+D 40V, 200mA, Low Noise, CMOS LDO Linear Regulator
+K
+F https://www.analog.com/ADPL44002/datasheet
+$ENDCMP
+#
+#End Doc Library
