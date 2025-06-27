@@ -1212,6 +1212,12 @@
 		(uuid "e90a5827-b0c3-426a-8679-e4bb32b25f1a")
 	)
 	(junction
+		(at 177.8 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0efd4031-b71f-4a2f-ae65-62d7948e7a6e")
+	)
+	(junction
 		(at 210.82 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1258,6 +1264,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9fe36944-65f4-4151-b318-54cd5eb14bfc")
+	)
+	(junction
+		(at 177.8 125.73)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b504b218-5c17-4fde-a273-81af8eb1d0ad")
 	)
 	(junction
 		(at 43.18 31.75)
@@ -1537,7 +1549,17 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 93.98) (xy 177.8 86.36)
+			(xy 171.45 90.17) (xy 172.72 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a32e881-b023-4c1a-9f88-705043d4847a")
+	)
+	(wire
+		(pts
+			(xy 177.8 93.98) (xy 177.8 90.17)
 		)
 		(stroke
 			(width 0)
@@ -1734,6 +1756,16 @@
 			(type default)
 		)
 		(uuid "89335193-93d1-4da1-9602-8b080c5a67a8")
+	)
+	(wire
+		(pts
+			(xy 177.8 132.08) (xy 177.8 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e21fd2d-6de7-4f73-96a3-eb3504e3b887")
 	)
 	(wire
 		(pts
@@ -1974,6 +2006,16 @@
 			(type default)
 		)
 		(uuid "d3032d03-6093-46ec-9b93-d91f18513b89")
+	)
+	(wire
+		(pts
+			(xy 177.8 90.17) (xy 177.8 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3547a3c-e1d1-4faf-b1fb-0992973917ef")
 	)
 	(wire
 		(pts
@@ -3274,6 +3316,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 177.8 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "44d15240-7255-4c67-9311-34a74270c73c")
+		(property "Reference" "C7"
+			(at 182.88 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2uF"
+			(at 180.34 130.81 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 177.8 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 177.8 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 177.8 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4bddd2ce-78f2-4f3b-8768-00743f0e95c5")
+		)
+		(pin "2"
+			(uuid "8c46331d-a794-420c-a427-b70c939d7f80")
+		)
+		(instances
+			(project "flex_mems"
+				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 210.82 137.16 270)
 		(unit 1)
@@ -3410,6 +3521,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 177.8 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4b2b6392-701e-4b51-b966-4e841f7a7a48")
+		(property "Reference" "#PWR029"
+			(at 177.8 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDL"
+			(at 177.8 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 177.8 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7c207ee3-74e9-46ee-8640-d56b6946604d")
+		)
+		(instances
+			(project "flex_mems"
+				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
+					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 97.79 78.74 0)
 		(unit 1)
@@ -3469,6 +3646,73 @@
 			(project "flex_mems"
 				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
 					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 171.45 90.17 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "523d616d-3bfd-4822-921e-fdb7a1635ed8")
+		(property "Reference" "#PWR030"
+			(at 165.1 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDR"
+			(at 167.64 90.1699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 171.45 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 171.45 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "28289b5a-12cf-4682-bef2-054165781f86")
+		)
+		(instances
+			(project "flex_mems"
+				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -3737,6 +3981,75 @@
 			(project "flex_mems"
 				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
 					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 175.26 90.17 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6c4216e6-59b3-407e-ae59-b17b4a29b510")
+		(property "Reference" "C8"
+			(at 173.99 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2uF"
+			(at 172.72 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 175.26 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 175.26 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a93c5198-838f-4a01-ae91-29118cb62293")
+		)
+		(pin "2"
+			(uuid "38ac416f-a346-457c-bad6-4539c9efc1c5")
+		)
+		(instances
+			(project "flex_mems"
+				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
+					(reference "C8")
 					(unit 1)
 				)
 			)

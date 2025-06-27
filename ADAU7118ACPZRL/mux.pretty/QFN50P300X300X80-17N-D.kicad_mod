@@ -279,4 +279,15 @@
 			(xyz 0 0 0)
 		)
 	)
+	(model "C:/Users/leona/OneDrive/SoSe25/BA/PCB/ADAU7118ACPZRL/3D/ADAU7118ACPZRL.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )
