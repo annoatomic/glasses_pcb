@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 2.54
+          "drill": 0.0,
+          "height": 0.66,
+          "width": 0.23
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -226,7 +226,44 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "pin_to_pin|1930400|1041400|7e2efb1e-852d-4e84-ba62-8899e2125a9d|017bd5b1-d044-43ec-8f7f-8570fe5b36fb|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221",
+        ""
+      ],
+      [
+        "pin_to_pin|1993900|571500|9864d326-7818-4245-8c0b-648eb978ecee|401fb8ca-bec4-415f-b070-37a5948206e6|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221",
+        ""
+      ],
+      [
+        "pin_to_pin|2260600|1231900|8f5763c3-35df-4f32-a5d1-96fc4f0871f5|3543dfdd-d708-4a1a-9573-7156f7606d92|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221",
+        ""
+      ],
+      [
+        "pin_to_pin|2654300|393700|a642ec00-b5d9-4b96-869b-b5979507aa08|8f5763c3-35df-4f32-a5d1-96fc4f0871f5|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221",
+        ""
+      ],
+      [
+        "pin_to_pin|2654300|444500|4cce2633-8740-477a-9a49-0267a840fc16|a642ec00-b5d9-4b96-869b-b5979507aa08|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221",
+        ""
+      ],
+      [
+        "pin_to_pin|2654300|495300|b3dfa4a6-19d8-4fb9-92b6-35f240af6f06|6fc8b2c0-389e-4ffc-97fe-2de57c36a972|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221",
+        ""
+      ],
+      [
+        "pin_to_pin|2654300|571500|7767b325-8506-418e-b07b-c1684ccc28c2|6f4765a1-1f3a-495b-85b2-2a664aa6dd0f|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221",
+        ""
+      ],
+      [
+        "pin_to_pin|2654300|596900|3c0db73f-05ed-4a8f-9415-d0159352a064|75c58148-b31d-4c50-8f1f-0a9ac0e0ccc3|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221",
+        ""
+      ],
+      [
+        "power_pin_not_driven|2743200|330200|91c92837-aac3-4fd2-9878-9344304ce89f|00000000-0000-0000-0000-000000000000|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|/1aeb6fc2-022e-4961-b0a7-a22f4026d221|",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -457,7 +494,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.17,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -486,7 +523,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_mems/flex_aufsatz/gbr/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",

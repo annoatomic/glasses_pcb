@@ -157,7 +157,7 @@
 		(property "Reference" "MK5"
 			(at 3.88 -1 0)
 			(layer "F.SilkS")
-			(uuid "5cc640f6-e69b-43f8-b376-63d5c5390861")
+			(uuid "d8f63cc6-ac9c-4617-88e0-af27a202992c")
 			(effects
 				(font
 					(size 1 1)
@@ -168,7 +168,7 @@
 		(property "Value" "IM69D130"
 			(at 0 2.5 0)
 			(layer "F.Fab")
-			(uuid "7ff37e90-d78c-4d8d-981c-a9cb332e5baa")
+			(uuid "350e0005-0deb-4ad4-88e7-03e9d994b9ea")
 			(effects
 				(font
 					(size 1 1)
@@ -181,7 +181,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "963544a1-06f1-45ed-9c26-1954237aecbc")
+			(uuid "674eef96-05a6-4349-9647-19fa3e2b41a4")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -194,7 +194,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "a3245c41-0290-481e-9cff-60fb9385d7a3")
+			(uuid "09ed4cf2-5ba9-43aa-8468-79ca1e2614df")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -681,7 +681,7 @@
 		(property "Reference" "J2"
 			(at -1.5 -3.18 180)
 			(layer "F.SilkS")
-			(uuid "5f6065cb-f270-422e-954c-f3082ed0e3c1")
+			(uuid "bd078be5-2dac-455a-a1a2-e8540c01acc8")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -692,7 +692,7 @@
 		(property "Value" "10164227-0101A1RLF"
 			(at 10.95 3.5 90)
 			(layer "F.Fab")
-			(uuid "679fab19-8555-4323-a51e-a28cbf59db22")
+			(uuid "d1f63b88-4035-4ca8-9071-81ac15b307f5")
 			(effects
 				(font
 					(size 0.787402 0.787402)
@@ -705,7 +705,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "f2e349ec-c527-40be-ae89-1365ea5c5764")
+			(uuid "cc2e507c-6112-4e8f-9b2b-e14f837e59ff")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -718,7 +718,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "246ea1f8-1845-4110-b156-d4f3ca6d10a2")
+			(uuid "d99f4f19-79c4-42c9-9df6-7d16e9687855")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2760,7 +2760,7 @@
 		(property "Reference" "MK6"
 			(at 3.68 0.69 0)
 			(layer "F.SilkS")
-			(uuid "47252811-343f-4888-b5fe-4c40fcce2893")
+			(uuid "07900eb4-e3f0-4f3c-ad30-9e387c0cdc43")
 			(effects
 				(font
 					(size 1 1)
@@ -2771,7 +2771,7 @@
 		(property "Value" "IM69D130"
 			(at 0 2.5 0)
 			(layer "F.Fab")
-			(uuid "d823106f-2cee-490c-a18d-cf51a87ca253")
+			(uuid "8ccd81a5-a252-45e9-947c-1eec2896aa3c")
 			(effects
 				(font
 					(size 1 1)
@@ -2784,7 +2784,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "dead8363-9b1c-4f8a-9721-07a201861caa")
+			(uuid "1b432593-ec00-4483-b6e5-9dea5bd1cc77")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2797,7 +2797,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "eccbd64d-7b44-4ac0-9fdb-b094cc9d3c57")
+			(uuid "95dd2c79-64e3-4778-979a-e0deb72fca9a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4214,7 +4214,7 @@
 		(property "Reference" "C6"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
-			(uuid "5970f9d0-c029-4093-8950-ed333aa056d1")
+			(uuid "e00b6e69-25b3-48a4-9f47-b9230194413d")
 			(effects
 				(font
 					(size 1 1)
@@ -4225,7 +4225,7 @@
 		(property "Value" "0.1uF"
 			(at 0 1.16 0)
 			(layer "F.Fab")
-			(uuid "2fd74d41-ddcd-4974-8908-0eb64f297f85")
+			(uuid "3cb466eb-9489-4666-837f-30b63e18757a")
 			(effects
 				(font
 					(size 1 1)
@@ -4238,7 +4238,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ef220338-8008-4916-8022-9b9077bdff42")
+			(uuid "42757a7c-1580-46a2-aba1-073d0b3b61d5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4251,7 +4251,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "51e2e968-324b-4cdf-9c3b-32eec48833a3")
+			(uuid "89787292-46da-4fe9-a3dd-5bc7861c2c9f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4941,7 +4941,7 @@
 		(property "Reference" "R6"
 			(at 0 -1.17 180)
 			(layer "F.SilkS")
-			(uuid "54e96eda-63af-4288-bbbd-17ca2999a1f1")
+			(uuid "1f8975b1-6fac-4c50-b657-b1dbd4264e71")
 			(effects
 				(font
 					(size 1 1)
@@ -4952,7 +4952,7 @@
 		(property "Value" "100"
 			(at 0 1.17 180)
 			(layer "F.Fab")
-			(uuid "d6443f20-6c77-492d-b5de-3fae386e3c3f")
+			(uuid "1ad2f891-783d-4e87-a2b6-d7d66a00b25e")
 			(effects
 				(font
 					(size 1 1)
@@ -4965,7 +4965,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "84752483-0d1d-40f0-9722-e9e5111513e1")
+			(uuid "b91b6a6d-9979-4c9a-95b1-b23b733b59d6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4978,7 +4978,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "46aa97b2-1215-437d-92e6-19e14db3e65b")
+			(uuid "6ac93091-9392-427d-a7b7-aba0a5c104d1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5745,7 +5745,7 @@
 		(property "Reference" "C7"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
-			(uuid "7b5947bb-a27b-4eb1-87cf-56b1560d476a")
+			(uuid "666107d1-3c1f-4282-8aea-be17c6c54c56")
 			(effects
 				(font
 					(size 1 1)
@@ -5756,7 +5756,7 @@
 		(property "Value" "2.2uF"
 			(at 0 1.16 0)
 			(layer "F.Fab")
-			(uuid "9c022ddd-2236-46cf-add1-e9004a1f79af")
+			(uuid "9c5cbe6e-68d4-4e41-9737-9d17aad5f07d")
 			(effects
 				(font
 					(size 1 1)
@@ -5768,7 +5768,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "38c5b5c3-186b-4005-99ef-ee1c8e1bc337")
+			(uuid "aa0995fd-1a58-4f46-8c2a-4fd24769861f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5780,7 +5780,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "56e69be4-16f7-4d53-99a8-061895135792")
+			(uuid "c41867c2-a6e9-4bda-8748-539614c013aa")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6145,7 +6145,7 @@
 		(property "Reference" "C5"
 			(at -0.5 1.5 0)
 			(layer "F.SilkS")
-			(uuid "c65b423e-3d71-4852-88d6-f82992889cd2")
+			(uuid "47b42a5f-c937-4d4a-8e6c-d03f7c30d008")
 			(effects
 				(font
 					(size 1 1)
@@ -6156,7 +6156,7 @@
 		(property "Value" "0.1uF"
 			(at 0 1.16 0)
 			(layer "F.Fab")
-			(uuid "980f1bed-5b0a-46f3-8ce7-7abdb2d69d92")
+			(uuid "572fb44f-c8c9-4c84-a68e-a8ffd12fe1ad")
 			(effects
 				(font
 					(size 1 1)
@@ -6169,7 +6169,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "b48e242e-f383-46ab-9dbb-cf2a5a02d285")
+			(uuid "2059cb00-d9e7-46ba-8927-4af295ae15f3")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6182,7 +6182,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "9d9ef41b-e6d7-4c35-b9f5-881a5c98ea27")
+			(uuid "c1db9eac-330b-4f1a-ae82-03b1f86d4528")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7160,7 +7160,7 @@
 		(property "Reference" "R5"
 			(at 2.01 0.5 180)
 			(layer "F.SilkS")
-			(uuid "54a780df-e5ef-45df-b884-ff533ce578b7")
+			(uuid "ff8f08ac-8d2f-4a9f-b694-96200c16e250")
 			(effects
 				(font
 					(size 1 1)
@@ -7171,7 +7171,7 @@
 		(property "Value" "100"
 			(at 0 1.17 180)
 			(layer "F.Fab")
-			(uuid "9e5d7186-236e-4348-8c5a-6c88ea1ccf02")
+			(uuid "b1d16a7e-0d6d-493e-aee0-b67c1aa9fed9")
 			(effects
 				(font
 					(size 1 1)
@@ -7184,7 +7184,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "10346355-fa10-4830-83ed-f0b0e1091592")
+			(uuid "0544f227-3794-4508-a0b4-68fad50eeb94")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7197,7 +7197,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "99e6bac6-17c7-4882-893b-9452ede998b7")
+			(uuid "23194bc1-5e45-456b-bbd3-722bd9e1332a")
 			(effects
 				(font
 					(size 1.27 1.27)
