@@ -2835,16 +2835,16 @@
 		(uuid "a9d8416c-58e2-4192-9b76-c07b5013802e")
 	)
 	(junction
+		(at 267.97 34.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b208c9cc-97dd-4332-85c6-a328e8512d11")
+	)
+	(junction
 		(at 90.17 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b26d188b-816d-4398-8926-0e6e6120e009")
-	)
-	(junction
-		(at 191.77 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c359de1c-bb3b-4da0-a2f1-86b2cbdfb1e3")
 	)
 	(junction
 		(at 193.04 104.14)
@@ -3110,16 +3110,6 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 54.61) (xy 191.77 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0fdeb81e-537b-4d54-83e3-f2f689c9a5d0")
-	)
-	(wire
-		(pts
 			(xy 186.69 39.37) (xy 199.39 39.37)
 		)
 		(stroke
@@ -3170,6 +3160,16 @@
 	)
 	(wire
 		(pts
+			(xy 199.39 57.15) (xy 198.12 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15d68478-39ee-46e0-85c0-ef86d69a331c")
+	)
+	(wire
+		(pts
 			(xy 29.21 39.37) (xy 40.64 39.37)
 		)
 		(stroke
@@ -3207,6 +3207,16 @@
 			(type default)
 		)
 		(uuid "1c33b8d9-f3fa-4db6-8ee7-4e36ce690713")
+	)
+	(wire
+		(pts
+			(xy 267.97 34.29) (xy 267.97 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f13fdcb-743b-46fa-9a17-35b97726505a")
 	)
 	(wire
 		(pts
@@ -3267,6 +3277,16 @@
 			(type default)
 		)
 		(uuid "3c714d64-0304-4fc5-bb71-19b70085f95c")
+	)
+	(wire
+		(pts
+			(xy 198.12 57.15) (xy 198.12 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d91d87f-7205-45cf-ba8c-c974e7841330")
 	)
 	(wire
 		(pts
@@ -3370,7 +3390,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 57.15) (xy 191.77 58.42)
+			(xy 191.77 54.61) (xy 191.77 58.42)
 		)
 		(stroke
 			(width 0)
@@ -3460,6 +3480,16 @@
 	)
 	(wire
 		(pts
+			(xy 266.7 34.29) (xy 267.97 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ce112ae-30b7-4dc3-8c19-90bfc9790e37")
+	)
+	(wire
+		(pts
 			(xy 30.48 72.39) (xy 40.64 72.39)
 		)
 		(stroke
@@ -3520,7 +3550,7 @@
 	)
 	(wire
 		(pts
-			(xy 267.97 46.99) (xy 267.97 33.02)
+			(xy 267.97 46.99) (xy 267.97 34.29)
 		)
 		(stroke
 			(width 0)
@@ -3567,6 +3597,16 @@
 			(type default)
 		)
 		(uuid "99e7ab0c-70ba-43d2-8aa4-74a0d389fce1")
+	)
+	(wire
+		(pts
+			(xy 259.08 34.29) (xy 261.62 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b641406-1563-4acc-8300-75f166fd7f6f")
 	)
 	(wire
 		(pts
@@ -3777,16 +3817,6 @@
 			(type default)
 		)
 		(uuid "d67e7970-6688-4dde-b4d9-1a8240ad9780")
-	)
-	(wire
-		(pts
-			(xy 191.77 57.15) (xy 199.39 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d9f8f94d-9a38-44af-954d-0a96285984c7")
 	)
 	(wire
 		(pts
@@ -4202,6 +4232,72 @@
 			(project "flex_aufsatz"
 				(path "/1aeb6fc2-022e-4961-b0a7-a22f4026d221"
 					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 198.12 59.69 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "19efcb73-fe00-467d-a84f-461f694ec6e1")
+		(property "Reference" "#PWR016"
+			(at 198.12 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 198.12 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 198.12 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 198.12 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 198.12 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "97e16f89-76d9-43d7-ab03-688304925285")
+		)
+		(instances
+			(project "flex_aufsatz"
+				(path "/1aeb6fc2-022e-4961-b0a7-a22f4026d221"
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -5385,6 +5481,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 259.08 34.29 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6e6aead7-ac4d-472a-a054-502ae6b18f9f")
+		(property "Reference" "#PWR019"
+			(at 259.08 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 259.08 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 259.08 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 259.08 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "90c7fad0-c8ad-4d4b-9520-8e853888ebd5")
+		)
+		(instances
+			(project "flex_aufsatz"
+				(path "/1aeb6fc2-022e-4961-b0a7-a22f4026d221"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 270.51 38.1 0)
 		(unit 1)
@@ -5976,6 +6138,75 @@
 			(project "flex_aufsatz"
 				(path "/1aeb6fc2-022e-4961-b0a7-a22f4026d221"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 264.16 34.29 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c7719c40-e2dc-4c61-bf66-77be93d8464e")
+		(property "Reference" "C5"
+			(at 265.43 29.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 266.7 31.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 264.16 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 264.16 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 264.16 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e4e9f12f-baa6-494e-a1bb-264d8155cdeb")
+		)
+		(pin "2"
+			(uuid "a6f3db8c-d591-4858-a75d-05cefc88bcc3")
+		)
+		(instances
+			(project "flex_aufsatz"
+				(path "/1aeb6fc2-022e-4961-b0a7-a22f4026d221"
+					(reference "C5")
 					(unit 1)
 				)
 			)

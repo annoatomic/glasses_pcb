@@ -1529,6 +1529,16 @@
 	)
 	(wire
 		(pts
+			(xy 260.35 88.9) (xy 260.35 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5485aad5-294d-42bc-8571-6adb8baa2b74")
+	)
+	(wire
+		(pts
 			(xy 59.69 102.87) (xy 64.77 102.87)
 		)
 		(stroke
@@ -1759,6 +1769,26 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 114.3) (xy 250.19 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fd6f78d-f4aa-4bb9-9bda-e829f168d264")
+	)
+	(wire
+		(pts
+			(xy 250.19 88.9) (xy 250.19 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94cda932-fd2f-4319-839a-68aad854e31d")
+	)
+	(wire
+		(pts
 			(xy 177.8 132.08) (xy 177.8 130.81)
 		)
 		(stroke
@@ -1836,6 +1866,16 @@
 			(type default)
 		)
 		(uuid "a6e50a5c-69c5-4e5f-a007-400e7da2212e")
+	)
+	(wire
+		(pts
+			(xy 250.19 95.25) (xy 250.19 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8ff9ce5-449f-4914-9e9c-d65724375716")
 	)
 	(wire
 		(pts
@@ -2029,6 +2069,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 107.95) (xy 250.19 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d79fc043-b959-4a61-a273-578f9f87ba92")
+	)
+	(wire
+		(pts
 			(xy 226.06 58.42) (xy 237.49 58.42)
 		)
 		(stroke
@@ -2126,6 +2176,16 @@
 			(type default)
 		)
 		(uuid "faf264ea-d257-4ed4-85e7-83a8de5c03f5")
+	)
+	(wire
+		(pts
+			(xy 260.35 95.25) (xy 260.35 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbc64471-d1b2-454f-ab4a-c6a54ade4538")
 	)
 	(wire
 		(pts
@@ -2308,6 +2368,72 @@
 		(uuid "f9dac599-853a-46a3-9300-41596c0b2031")
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 250.19 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "019a9e3b-5ef0-4293-bb6f-421bfce8931c")
+		(property "Reference" "#PWR033"
+			(at 250.19 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDR"
+			(at 250.19 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 250.19 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "af9e305b-8419-439a-87bc-8f5dd6e6c0ee")
+		)
+		(instances
+			(project "flex_mems"
+				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 205.74 40.64 90)
 		(unit 1)
@@ -2371,6 +2497,71 @@
 			(project "flex_mems"
 				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
 					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 250.19 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "060e6314-d92d-4724-83dc-a774313f15ce")
+		(property "Reference" "#PWR031"
+			(at 250.19 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3R"
+			(at 250.19 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 250.19 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2fe4303a-2fa8-4faa-b26d-25d90cbc26a3")
+		)
+		(instances
+			(project "flex_mems"
+				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -2832,6 +3023,75 @@
 			(project "flex_mems"
 				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 260.35 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2a1cb9d3-c8b0-4823-b491-afdc9dc74200")
+		(property "Reference" "C10"
+			(at 265.43 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2uF"
+			(at 262.89 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 260.35 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 260.35 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 260.35 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "29ab42a9-fd85-42c4-993e-b7f8ce353cf0")
+		)
+		(pin "2"
+			(uuid "3f62e2a3-5d5b-4305-a893-43b3eb0bc1f1")
+		)
+		(instances
+			(project "flex_mems"
+				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -3652,6 +3912,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 250.19 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "51699d5d-82f8-4c54-8863-b9664b887294")
+		(property "Reference" "C11"
+			(at 255.27 113.03 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2uF"
+			(at 252.73 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 250.19 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 250.19 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 250.19 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "369cc798-8527-49e5-a989-da94bc5f2584")
+		)
+		(pin "2"
+			(uuid "e7fc820b-ab52-4755-9426-8e30a2cedebf")
+		)
+		(instances
+			(project "flex_mems"
+				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
+					(reference "C11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 171.45 90.17 270)
 		(unit 1)
@@ -3780,6 +4109,72 @@
 			(project "flex_mems"
 				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
 					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 260.35 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "59c11254-a5c4-4b8e-9874-de7acf420a1d")
+		(property "Reference" "#PWR034"
+			(at 260.35 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDR"
+			(at 260.35 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 260.35 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 260.35 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "46c78c3b-9089-4ed7-ac52-492302a1f25c")
+		)
+		(instances
+			(project "flex_mems"
+				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -4746,6 +5141,75 @@
 			(project "flex_mems"
 				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 250.19 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a988947c-e929-4cff-b667-dfc0a347b9f6")
+		(property "Reference" "C9"
+			(at 255.27 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2uF"
+			(at 252.73 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 250.19 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 250.19 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 250.19 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "37414366-e890-44c0-b71e-de55b1c9f532")
+		)
+		(pin "2"
+			(uuid "64ac3454-40bd-45e0-9011-71a74e2811da")
+		)
+		(instances
+			(project "flex_mems"
+				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -5859,6 +6323,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 250.19 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e062566c-6414-462a-9ddc-c46390c14381")
+		(property "Reference" "#PWR035"
+			(at 250.19 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3L"
+			(at 250.19 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 250.19 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "174bde1d-193b-487a-811f-fb40bae4f5e1")
+		)
+		(instances
+			(project "flex_mems"
+				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 152.4 45.72 0)
 		(unit 1)
@@ -6187,6 +6716,137 @@
 			(project "flex_mems"
 				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
 					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 250.19 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f83a1024-7af3-4d44-bcf1-f6fe573dd2d5")
+		(property "Reference" "#PWR036"
+			(at 250.19 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDL"
+			(at 250.19 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 250.19 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7180b145-28f6-411d-aece-50a2df3078ba")
+		)
+		(instances
+			(project "flex_mems"
+				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
+					(reference "#PWR036")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 260.35 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fb0afcab-1ec0-4e00-8984-f242ac6913c1")
+		(property "Reference" "#PWR032"
+			(at 260.35 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3R"
+			(at 260.35 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 260.35 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 260.35 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dad45dca-8cfe-481d-acd0-63d4fce8d736")
+		)
+		(instances
+			(project "flex_mems"
+				(path "/147ce085-095d-43cf-ac4d-8be31407b091"
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
