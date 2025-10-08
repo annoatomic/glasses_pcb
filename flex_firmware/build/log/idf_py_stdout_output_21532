@@ -1,0 +1,21 @@
+[0/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\leona\OneDrive\SoSe25\BA\PCB\flex_firmware\build && C:\Users\leona\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_SIZE_TOOL=C:/Users/leona/.espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;-m;esp_idf_size -D MAP_FILE=C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/flex_firmware.map -D OUTPUT_JSON= -P C:/Users/leona/esp_container/v5.4.1/esp-idf/tools/cmake/run_size_tool.cmake"
+                            Memory Type Usage Summary                             
++--------------------------------------------------------------------------------+
+| Memory Type/Section | Used [bytes] | Used [%] | Remain [bytes] | Total [bytes] |
+|---------------------+--------------+----------+----------------+---------------|
+| Flash Code          |       548818 |     6.54 |        7839758 |       8388576 |
+|    .text            |       548818 |     6.54 |                |               |
+| Flash Data          |       110052 |     0.33 |       33444348 |      33554400 |
+|    .rodata          |       109796 |     0.33 |                |               |
+|    .appdesc         |          256 |      0.0 |                |               |
+| DIRAM               |       108444 |    31.73 |         233316 |        341760 |
+|    .text            |        73923 |    21.63 |                |               |
+|    .data            |        18948 |     5.54 |                |               |
+|    .bss             |        15512 |     4.54 |                |               |
+| IRAM                |        16383 |    99.99 |              1 |         16384 |
+|    .text            |        15356 |    93.73 |                |               |
+|    .vectors         |         1027 |     6.27 |                |               |
+| RTC FAST            |          308 |     3.76 |           7884 |          8192 |
+|    .force_fast      |           28 |     0.34 |                |               |
+|    .rtc_reserved    |           24 |     0.29 |                |               |
++--------------------------------------------------------------------------------+

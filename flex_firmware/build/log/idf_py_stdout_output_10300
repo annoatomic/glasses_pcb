@@ -1,0 +1,271 @@
+Command: C:\Users\leona\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe c:\Users\leona\esp_container\esp-idf-v5.5\tools/idf_monitor.py -p COM8 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\leona\OneDrive\SoSe25\BA\PCB\flex_firmware\build\flex_firmware.elf C:\Users\leona\OneDrive\SoSe25\BA\PCB\flex_firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Users\leona\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'c:\Users\leona\esp_container\esp-idf-v5.5\tools\idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Aug 17 2025 16:33:53[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1cbfch (117756) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0002cc24 vaddr=3fc9b900 size=033f4h ( 13300) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=8b838h (571448) map[0m
+[0;32mI (211) esp_image: segment 3: paddr=000bb860 vaddr=3fc9ecf4 size=01630h (  5680) load[0m
+[0;32mI (213) esp_image: segment 4: paddr=000bce98 vaddr=40374000 size=178d4h ( 96468) load[0m
+[0;32mI (236) esp_image: segment 5: paddr=000d4774 vaddr=600fe100 size=00020h (    32) load[0m
+[0;32mI (246) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (246) boot: Disabling RNG early entropy source...[0m
+[0;32mI (256) cpu_start: Multicore app[0m
+[0;32mI (265) cpu_start: Pro cpu start user code[0m
+[0;32mI (265) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (265) app_init: Application information:[0m
+[0;32mI (265) app_init: Project name:     flex_firmware[0m
+[0;32mI (270) app_init: App version:      19d35fa-dirty[0m
+[0;32mI (274) app_init: Compile time:     Aug 17 2025 16:40:24[0m
+[0;32mI (279) app_init: ELF file SHA256:  781865ef7...[0m
+[0;32mI (283) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (287) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (291) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (295) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (299) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (305) heap_init: At 3FCA4030 len 000456E0 (277 KiB): RAM[0m
+[0;32mI (310) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (315) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (321) heap_init: At 600FE120 len 00001EC8 (7 KiB): RTCRAM[0m
+[0;32mI (327) spi_flash: detected chip: boya[0m
+[0;32mI (329) spi_flash: flash io: dio[0m
+[0;33mW (332) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (345) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (351) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (358) main_task: Started on CPU0[0m
+[0;32mI (378) main_task: Calling app_main()[0m
+[0;32mI (388) UDP_unicast: Reg 0x0A = 0x11[0m
+[0;32mI (408) pp: pp rom version: e7ae62f[0m
+[0;32mI (408) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (418) wifi:wifi driver task: 3fcaf0f4, prio:23, stack:6656, core=0[0m
+[0;32mI (428) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (428) wifi:wifi certification version: v7.0[0m
+[0;32mI (428) wifi:config NVS flash: enabled[0m
+[0;32mI (428) wifi:config nano formatting: disabled[0m
+[0;32mI (428) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (438) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (438) wifi:Init management short buffer num: 32[0m
+[0;32mI (438) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (448) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (448) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (458) wifi:Init static rx buffer num: 10[0m
+[0;32mI (458) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (468) wifi_init: rx ba win: 6[0m
+[0;32mI (468) wifi_init: accept mbox: 6[0m
+[0;32mI (468) wifi_init: tcpip mbox: 32[0m
+[0;32mI (468) wifi_init: udp mbox: 6[0m
+[0;32mI (478) wifi_init: tcp mbox: 6[0m
+[0;32mI (478) wifi_init: tcp tx win: 5760[0m
+[0;32mI (478) wifi_init: tcp rx win: 5760[0m
+[0;32mI (488) wifi_init: tcp mss: 1440[0m
+[0;32mI (488) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (488) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (498) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (538) wifi:mode : sta (fc:01:2c:cb:6a:b8)[0m
+[0;32mI (538) wifi:enable tsf[0m
+[0;32mI (538) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (538) wifi_init: Waiting for IP...[0m
+[0;32mI (548) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (548) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (558) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (578) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (688) wifi:connected with TP-Link_Extender EG, aid = 3, channel 1, BW20, bssid = 68:ff:7b:45:c3:7f[0m
+[0;32mI (688) wifi:security: WPA2-PSK, phy: bgn, rssi: -68[0m
+[0;32mI (698) wifi:pm start, type: 0[0m
+
+[0;32mI (698) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (698) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (728) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (728) wifi:<ba-add>idx:0 (ifx:0, 68:ff:7b:45:c3:7f), tid:0, ssn:3, winSize:64[0m
+[0;32mI (2358) esp_netif_handlers: sta ip: 192.168.2.170, mask: 255.255.255.0, gw: 192.168.2.1[0m
+[0;32mI (2358) wifi_init: Got IP: 192.168.2.170[0m
+[0;32mI (2358) wifi_init: Connected![0m
+[0;32mI (2358) UDP_unicast: audio_read_task started (chunk=4096 B, frames=256, frame_bytes=16)[0m
+[0;32mI (2358) UDP_unicast: stream_task: 2ch UDP (raw LE) -> 192.168.2.114:7000[0m
+[0;32mI (2358) main_task: Returned from app_main()[0m
+[0;32mI (3368) UDP_unicast: TX ~194560 B/s (soll 192000)[0m
+[0;32mI (4368) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (5378) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (6378) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (7388) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (8388) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (9388) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (10398) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (11398) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (12398) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (13408) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (14408) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (15408) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (16408) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (17418) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (18418) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (19428) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (20428) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (21428) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (22438) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (23438) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (24438) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (25438) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (26448) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (27448) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (28448) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (29458) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (30458) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (31458) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (32468) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (33468) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (34468) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (35468) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (36478) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (37478) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (38478) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (39488) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (40488) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (41498) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (42498) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (43498) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (44498) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (45508) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (46508) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (47508) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (48508) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (49508) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (50518) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (51518) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (52528) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (53528) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (54528) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (55528) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (56528) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (57538) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (58538) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (59538) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (60538) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (61548) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (62548) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (63558) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (64558) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (65558) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (66558) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (67568) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (68568) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (69568) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (70568) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (71578) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (72578) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (73588) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (74588) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (75588) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (76588) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (77588) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (78598) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (79598) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (80608) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (81608) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (82608) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (83608) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (84618) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (85618) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (86618) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (87628) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (88628) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (89628) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (90638) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (91638) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (92638) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (93648) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (94648) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (95658) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (96658) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (97658) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (98658) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (99668) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (100668) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (101668) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (102678) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (103678) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (104688) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (105688) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (106698) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (107698) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (108698) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (109698) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (110708) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (111708) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (112708) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (113718) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (114728) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (115728) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (116728) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (117728) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (118738) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (119738) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (120738) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (121738) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (122738) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (123738) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (124748) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (125748) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (126748) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (127748) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (128748) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (129758) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (130758) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (131758) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (132768) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (133768) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (134768) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (135768) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (136778) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (137778) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (138778) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (139788) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (140788) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (141788) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (142788) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (143788) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (144788) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (145788) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (146798) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (147808) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (148808) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (149808) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (150818) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (151818) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (152818) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (153818) UDP_unicast: TX ~191488 B/s (soll 192000)[0m
+[0;32mI (154828) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (155828) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (156828) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (157828) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (158838) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (159838) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (160838) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (161838) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (162848) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (163858) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (164858) UDP_unicast: TX ~192512 B/s (soll 192000)[0m
+[0;32mI (165858) UDP_unicast: TX ~193536 B/s (soll 192000)[0m
+[0;32mI (166868) UDP_unicast: TX ~192512 B/s (soll 192000)[0m

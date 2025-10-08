@@ -1,0 +1,261 @@
+Command: C:\Users\leona\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe c:\Users\leona\esp_container\esp-idf-v5.5\tools/idf_monitor.py -p COM8 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\leona\OneDrive\SoSe25\BA\PCB\flex_firmware\build\flex_firmware.elf C:\Users\leona\OneDrive\SoSe25\BA\PCB\flex_firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Users\leona\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'c:\Users\leona\esp_container\esp-idf-v5.5\tools\idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Aug 17 2025 16:33:53[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1ccc0h (117952) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0002cce8 vaddr=3fc9b900 size=03330h ( 13104) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=8c3cch (574412) map[0m
+[0;32mI (212) esp_image: segment 3: paddr=000bc3f4 vaddr=3fc9ec30 size=016f4h (  5876) load[0m
+[0;32mI (214) esp_image: segment 4: paddr=000bdaf0 vaddr=40374000 size=178d4h ( 96468) load[0m
+[0;32mI (237) esp_image: segment 5: paddr=000d53cc vaddr=600fe100 size=00020h (    32) load[0m
+[0;32mI (246) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (246) boot: Disabling RNG early entropy source...[0m
+[0;32mI (257) cpu_start: Multicore app[0m
+[0;32mI (266) cpu_start: Pro cpu start user code[0m
+[0;32mI (266) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (266) app_init: Application information:[0m
+[0;32mI (266) app_init: Project name:     flex_firmware[0m
+[0;32mI (270) app_init: App version:      19d35fa-dirty[0m
+[0;32mI (275) app_init: Compile time:     Aug 17 2025 16:40:24[0m
+[0;32mI (280) app_init: ELF file SHA256:  b3126e736...[0m
+[0;32mI (284) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (288) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (291) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (295) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (299) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (306) heap_init: At 3FCA4020 len 000456F0 (277 KiB): RAM[0m
+[0;32mI (311) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (316) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (321) heap_init: At 600FE120 len 00001EC8 (7 KiB): RTCRAM[0m
+[0;32mI (327) spi_flash: detected chip: boya[0m
+[0;32mI (330) spi_flash: flash io: dio[0m
+[0;33mW (333) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (345) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (351) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (358) main_task: Started on CPU0[0m
+[0;32mI (378) main_task: Calling app_main()[0m
+[0;32mI (388) UDP_unicast: Reg 0x0A = 0x11[0m
+[0;32mI (408) pp: pp rom version: e7ae62f[0m
+[0;32mI (408) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (418) wifi:wifi driver task: 3fcee8ec, prio:23, stack:6656, core=0[0m
+[0;32mI (428) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (428) wifi:wifi certification version: v7.0[0m
+[0;32mI (428) wifi:config NVS flash: enabled[0m
+[0;32mI (428) wifi:config nano formatting: disabled[0m
+[0;32mI (428) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (438) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (438) wifi:Init management short buffer num: 32[0m
+[0;32mI (438) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (448) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (448) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (458) wifi:Init static rx buffer num: 10[0m
+[0;32mI (458) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (468) wifi_init: rx ba win: 6[0m
+[0;32mI (468) wifi_init: accept mbox: 6[0m
+[0;32mI (468) wifi_init: tcpip mbox: 32[0m
+[0;32mI (468) wifi_init: udp mbox: 6[0m
+[0;32mI (478) wifi_init: tcp mbox: 6[0m
+[0;32mI (478) wifi_init: tcp tx win: 5760[0m
+[0;32mI (478) wifi_init: tcp rx win: 5760[0m
+[0;32mI (488) wifi_init: tcp mss: 1440[0m
+[0;32mI (488) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (488) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (498) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (538) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (598) wifi:mode : sta (fc:01:2c:cb:6a:b8)[0m
+[0;32mI (598) wifi:enable tsf[0m
+[0;32mI (608) wifi_init: Waiting for IP...[0m
+[0;32mI (618) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (618) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (618) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (628) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (658) wifi:connected with iPhone von Leonard , aid = 1, channel 6, BW20, bssid = fa:ac:51:a0:bf:89[0m
+[0;32mI (658) wifi:security: WPA2-PSK, phy: bgn, rssi: -47[0m
+[0;32mI (668) wifi:pm start, type: 1[0m
+
+[0;32mI (668) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (668) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (708) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1708) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (1708) wifi_init: Got IP: 172.20.10.2[0m
+[0;32mI (1708) wifi_init: Connected![0m
+[0;32mI (1708) UDP_unicast: audio_read_task started (chunk=4096 B, frames=256, frame_bytes=16)[0m
+[0;32mI (1708) UDP_unicast: stream_task started, UDP -> 172.20.10.3:7000[0m
+[0;32mI (1708) main_task: Returned from app_main()[0m
+[0;32mI (37628) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (40138) wifi:ap_probe_send over, reset wifi status to disassoc[0m
+[0;32mI (40138) wifi:state: run -> init (0xc800)[0m
+[0;32mI (40148) wifi:pm stop, total sleep time: 22700872 us / 39479567 us[0m
+
+[0;32mI (40148) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (40148) wifi_init: Disconnected, retrying...[0m
+[0;33mW (40158) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40158) UDP_unicast: sendto failed: errno=118[0m
+[0;32mI (40168) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (40168) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (40198) wifi:state: auth -> assoc (0x0)[0m
+[0;33mW (40198) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40198) UDP_unicast: sendto failed: errno=118[0m
+[0;32mI (40208) wifi:state: assoc -> run (0x10)[0m
+[0;33mW (40238) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40238) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40278) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40288) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40318) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40328) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40368) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40368) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40408) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40408) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40448) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40458) UDP_unicast: sendto failed: errno=118[0m
+[0;32mI (40478) wifi:connected with iPhone von Leonard , aid = 1, channel 6, BW20, bssid = 12:2f:eb:0f:2c:85[0m
+[0;32mI (40478) wifi:security: WPA2-PSK, phy: bgn, rssi: -30[0m
+[0;32mI (40478) wifi:pm start, type: 1[0m
+
+[0;32mI (40478) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;33mW (40488) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40498) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40538) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40538) UDP_unicast: sendto failed: errno=118[0m
+[0;32mI (40578) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;33mW (40578) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40578) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40618) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40628) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40658) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40668) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40708) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40708) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40748) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40748) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40788) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40798) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40838) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40838) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40878) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40878) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40918) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40928) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40958) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (40968) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41008) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41008) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41048) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41048) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41088) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41098) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41128) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41138) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41178) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41178) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41218) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41218) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41258) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41268) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41298) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41308) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41348) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41348) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41388) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41388) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41428) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41438) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41478) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41478) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41518) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41518) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41558) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41568) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41598) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41608) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41648) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41648) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41688) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (41688) UDP_unicast: sendto failed: errno=118[0m
+[0;32mI (41698) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (41698) wifi_init: Got IP: 172.20.10.2[0m
+[0;32mI (66238) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (68738) wifi:ap_probe_send over, reset wifi status to disassoc[0m
+[0;32mI (68738) wifi:state: run -> init (0xc800)[0m
+[0;32mI (68748) wifi:pm stop, total sleep time: 16113810 us / 28264290 us[0m
+
+[0;32mI (68748) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (68758) wifi_init: Disconnected, retrying...[0m
+[0;33mW (68778) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (68788) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (68818) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (68828) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (68868) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (68868) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (68908) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (68908) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (68948) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (68958) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (68998) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (68998) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69038) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69038) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69078) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69088) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69118) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69128) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69168) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69168) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69208) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69208) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69248) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69258) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69288) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69298) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69338) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69338) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69378) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69378) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69418) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69428) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69458) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69468) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69508) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69508) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69548) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69548) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69588) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69598) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69638) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69638) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69678) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69678) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69718) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69728) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69758) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69768) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69808) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69808) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69848) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69848) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69888) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69898) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69928) UDP_unicast: sendto failed: errno=118[0m
+[0;33mW (69938) UDP_unicast: sendto failed: errno=118[0

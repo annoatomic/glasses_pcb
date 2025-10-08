@@ -1,0 +1,1081 @@
+J�ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2a (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Aug 10 2025 13:22:21[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0cbf4h ( 52212) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=0001cc1c vaddr=3fc94100 size=02a38h ( 10808) load[0m
+[0;32mI (100) esp_image: segment 2: paddr=0001f65c vaddr=40374000 size=009bch (  2492) load[0m
+[0;32mI (104) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1e070h (122992) map[0m
+[0;32mI (133) esp_image: segment 4: paddr=0003e098 vaddr=403749bc size=0f6a0h ( 63136) load[0m
+[0;32mI (147) esp_image: segment 5: paddr=0004d740 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (153) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (153) boot: Disabling RNG early entropy source...[0m
+[0;32mI (164) cpu_start: Multicore app[0m
+[0;32mI (173) cpu_start: Pro cpu start user code[0m
+[0;32mI (173) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (174) app_init: Application information:[0m
+[0;32mI (174) app_init: Project name:     flex_firmware[0m
+[0;32mI (178) app_init: App version:      19d35fa-dirty[0m
+[0;32mI (182) app_init: ELF file SHA256:  d454f0c18...[0m
+[0;32mI (187) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (191) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (194) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (198) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (202) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (209) heap_init: At 3FC97410 len 00052300 (328 KiB): RAM[0m
+[0;32mI (214) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (219) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (224) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (230) spi_flash: detected chip: boya[0m
+[0;32mI (233) spi_flash: flash io: dio[0m
+[0;33mW (236) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (248) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (258) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (264) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (271) main_task: Started on CPU0[0m
+[0;32mI (281) main_task: Calling app_main()[0m
+[0;32mI (281) TDM_test: I2S-TDM init done.[0m
+[0;32mI (281) TDM_test: ADAU7118 ID: 41 71 18 01[0m
+[0;32mI (301) main_task: Returned from app_main()[0m
+[0;32mI (301) TDM_test: reader task started[0m
+[0;32mI (301) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (301) TDM_test: Frame[0]: [FE7E 027F 067F 0A7F 0E7F 127F][0m
+[0;32mI (301) TDM_test: Frame[0]: [AD7F AE7F AF7F B17F B27F B37F][0m
+[0;32mI (311) TDM_test: Frame[0]: [E57F E57F E67F E67F E67F E77F][0m
+[0;32mI (311) TDM_test: Frame[0]: [F77F F77F F77F F77F F77F F87F][0m
+[0;32mI (321) TDM_test: Frame[0]: [FD7F FD7F FD7F FD7F FD7F FD7F][0m
+[0;32mI (321) TDM_test: Frame[0]: [FF7F FF7F FF7F FF7F FF7F FF7F][0m
+[0;32mI (331) TDM_test: Frame[0]: [FF7F FF7F FF7F FF7F FF7F FF7F][0m
+[0;32mI (331) TDM_test: Frame[0]: [FF7F FF7F FF7F FF7F FF7F FF7F][0m
+[0;32mI (341) TDM_test: Frame[0]: [FF7F FF7F FF7F FF7F FF7F FF7F][0m
+[0;32mI (341) TDM_test: Frame[0]: [FF7F FF7F FF7F FF7F FF7F FF7F][0m
+[0;32mI (351) TDM_test: Frame[0]: [FF7F FF7F FF7F FF7F FF7F FF7F][0m
+[0;32mI (351) TDM_test: Frame[0]: [FF7F FF7F FF7F FF7F FF7F FF7F][0m
+[0;32mI (361) TDM_test: Frame[0]: [FF7F FF7F FF7F FF7F FF7F FF7F][0m
+[0;32mI (371) TDM_test: Frame[0]: [FF7F FF7F FF7F FF7F FF7F FF7F][0m
+[0;32mI (371) TDM_test: Frame[0]: [FF7F FF7F FF7F FF7F FF7F FF7F][0m
+[0;32mI (381) TDM_test: Frame[0]: [FF7F FF7F FF7F FF7F FF7F FF7F][0m
+[0;32mI (381) TDM_test: Frame[0]: [FF7F FF7F FF7F FF7F FF7F FF7F][0m
+[0;32mI (391) TDM_test: Frame[0]: [FF7F FF7F 0000 0000 0000 0000][0m
+[0;32mI (391) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (401) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (401) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (411) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (411) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (421) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (421) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (431) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (431) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (441) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (441) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (451) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (461) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (461) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (471) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (471) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (481) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (481) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (491) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (491) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (501) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (501) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (511) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (511) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (521) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (521) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (531) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (531) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (541) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (551) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (551) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (561) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (561) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (571) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (571) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (581) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (581) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (591) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (591) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (601) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (601) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (611) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (611) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (621) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (621) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;32mI (631) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (651) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (651) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (661) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (661) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (671) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (671) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (681) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (681) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (691) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (691) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (701) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (701) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (711) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (711) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (721) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (721) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (731) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (731) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (741) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (741) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (751) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (751) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (761) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (761) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (771) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (771) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (781) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (781) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (791) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (791) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (801) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (801) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (811) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (811) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (821) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (821) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (831) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (831) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (841) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (841) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (851) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (851) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (861) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (861) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (871) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (871) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (881) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (881) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (891) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (891) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (901) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (901) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (911) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (911) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (921) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (921) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (931) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (931) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (941) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (941) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (951) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (951) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (961) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (961) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (971) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (971) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (981) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (981) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (991) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (991) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1001) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1001) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1011) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1011) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1021) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1021) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1031) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1031) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1041) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1041) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1051) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1051) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1061) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1061) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1071) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1071) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1081) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1081) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1091) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1091) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1101) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1101) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1111) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1111) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1121) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1121) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1131) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1131) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1141) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1141) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1151) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1151) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1161) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1161) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1171) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1171) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1181) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1181) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1191) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1191) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1201) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1201) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1211) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1211) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1221) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1221) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1231) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1231) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1241) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1241) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1251) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1251) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1261) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1261) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1271) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1271) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1281) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1281) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1291) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1291) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1301) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1301) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1311) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1311) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1321) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1321) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1331) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1331) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1341) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1341) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1351) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1351) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1361) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1361) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1371) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1371) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1381) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1381) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1391) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1391) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1401) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1401) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1411) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1411) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1421) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1421) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1431) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1431) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1441) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1441) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1451) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1451) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1461) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1461) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1471) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1471) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1481) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1481) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1491) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1491) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1501) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1501) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1511) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1511) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1521) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1521) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1531) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1531) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1541) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1541) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1551) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1551) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1561) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1561) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1571) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1571) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1581) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1581) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1591) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1591) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1601) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1601) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1611) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1611) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1621) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1621) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1631) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1631) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1641) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1641) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1651) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1651) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1661) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1661) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1671) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1671) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1681) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1681) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1691) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1691) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1701) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1701) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1711) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1711) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1721) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1721) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1731) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1731) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1741) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1741) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1751) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1751) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1761) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1761) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1771) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1771) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1781) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1781) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1791) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1791) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1801) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1801) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1811) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1811) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1821) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1821) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1831) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1831) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1841) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1841) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1851) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1851) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1861) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1861) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1871) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1871) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1881) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1881) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1891) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1891) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1901) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1901) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1911) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1911) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1921) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1921) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1931) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1931) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1941) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1941) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1951) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1951) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1961) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1961) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1971) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1971) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1981) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1981) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (1991) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (1991) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2001) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2001) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2011) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2011) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2021) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2021) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2031) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2031) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2041) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2041) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2051) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2051) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2061) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2061) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2071) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2071) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2081) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2081) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2091) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2091) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2101) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2101) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2111) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2111) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2121) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2121) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2131) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2131) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2141) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2141) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2151) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2151) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2161) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2161) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2171) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2171) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2181) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2181) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2191) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2191) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2201) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2201) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2211) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2211) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2221) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2221) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2231) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2231) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2241) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2241) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2251) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2251) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2261) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2261) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2271) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2271) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2281) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2281) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2291) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2291) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2301) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2301) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2311) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2311) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2321) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2321) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2331) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2331) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2341) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2341) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2351) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2351) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2361) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2361) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2371) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2371) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2381) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2381) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2391) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2391) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2401) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2401) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2411) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2411) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2421) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2421) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2431) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2431) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2441) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2441) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2451) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2451) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2461) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2461) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2471) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2471) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2481) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2481) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2491) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2491) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2501) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2501) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2511) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2511) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2521) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2521) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2531) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2531) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2541) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2541) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2551) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2551) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2561) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2561) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2571) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2571) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2581) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2581) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2591) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2591) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2601) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2601) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2611) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2611) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2621) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2621) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2631) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2631) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2641) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2641) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2651) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2651) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2661) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2661) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2671) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2671) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2681) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2681) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2691) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2691) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2701) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2701) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2711) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2711) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2721) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2721) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2731) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2731) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2741) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2741) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2751) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2751) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2761) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2761) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2771) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2771) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2781) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2781) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2791) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2791) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2801) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2801) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2811) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2811) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2821) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2821) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2831) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2831) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2841) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2841) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2851) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2851) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2861) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2861) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2871) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2871) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2881) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2881) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2891) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2891) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2901) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2901) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2911) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2911) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2921) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2921) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2931) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2931) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2941) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2941) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2951) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2951) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2961) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2961) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2971) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2971) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2981) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2981) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (2991) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (2991) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3001) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3001) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3011) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3011) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3021) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3021) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3031) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3031) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3041) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3041) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3051) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3051) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3061) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3061) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3071) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3071) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3081) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3081) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3091) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3091) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3101) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3101) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3111) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3111) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3121) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3121) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3131) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3131) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3141) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3141) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3151) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3151) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3161) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3161) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3171) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3171) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3181) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3181) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3191) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3191) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3201) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3201) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3211) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3211) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3221) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3221) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3231) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3231) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3241) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3241) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3251) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3251) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3261) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3261) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3271) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3271) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3281) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3281) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3291) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3291) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3301) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3301) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3311) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3311) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3321) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3321) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3331) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3331) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3341) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3341) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3351) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3351) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3361) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3361) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3371) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3371) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3381) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3381) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3391) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3391) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3401) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3401) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3411) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3411) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3421) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3421) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3431) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3431) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3441) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3441) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3451) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3451) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3461) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3461) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3471) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3471) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3481) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3481) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3491) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3491) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3501) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3501) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3511) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3511) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3521) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3521) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3531) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3531) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3541) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3541) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3551) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3551) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3561) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3561) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3571) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3571) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3581) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3581) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3591) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3591) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3601) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3601) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3611) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3611) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3621) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3621) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3631) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3631) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3641) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3641) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3651) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3651) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3661) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3661) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3671) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3671) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3681) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3681) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3691) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3691) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3701) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3701) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3711) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3711) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3721) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3721) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3731) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3731) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3741) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3741) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3751) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3751) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3761) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3761) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3771) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3771) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3781) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3781) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3791) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3791) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3801) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3801) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3811) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3811) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3821) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3821) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3831) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3831) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3841) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3841) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3851) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3851) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3861) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3861) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3871) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3871) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3881) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3881) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3891) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3891) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3901) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3901) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3911) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3911) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3921) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3921) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3931) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3931) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3941) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3941) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3951) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3951) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3961) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3961) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3971) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3971) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3981) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3981) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (3991) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (3991) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4001) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4001) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4011) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4011) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4021) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4021) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4031) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4031) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4041) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4041) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4051) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4051) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4061) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4061) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4071) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4071) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4081) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4081) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4091) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4091) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4101) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4101) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4111) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4111) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4121) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4121) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4131) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4131) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4141) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4141) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4151) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4151) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4161) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4161) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4171) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4171) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4181) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4181) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4191) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4191) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4201) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4201) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4211) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4211) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4221) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4221) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4231) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4231) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4241) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4241) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4251) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4251) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4261) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4261) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4271) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4271) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4281) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4281) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4291) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4291) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4301) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4301) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4311) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4311) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4321) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4321) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4331) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4331) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4341) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4341) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4351) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4351) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4361) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4361) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4371) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4371) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4381) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4381) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4391) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4391) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4401) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4401) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4411) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4411) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4421) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4421) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4431) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4431) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4441) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4441) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4451) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4451) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4461) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4461) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4471) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4471) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4481) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4481) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4491) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4491) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4501) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4501) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4511) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4511) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4521) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4521) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4531) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4531) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4541) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4541) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4551) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4551) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4561) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4561) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4571) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4571) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4581) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4581) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4591) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4591) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4601) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4601) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4611) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4611) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4621) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4621) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4631) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4631) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4641) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4641) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4651) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4651) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4661) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4661) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4671) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4671) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4681) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4681) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4691) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4691) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4701) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4701) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4711) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4711) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4721) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4721) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4731) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4731) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4741) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4741) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4751) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4751) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4761) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4761) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4771) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4771) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4781) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4781) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4791) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4791) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4801) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4801) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4811) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4811) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4821) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4821) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4831) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4831) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4841) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4841) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4851) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4851) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4861) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4861) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4871) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4871) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4881) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4881) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4891) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4891) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4901) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4901) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4911) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4911) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4921) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4921) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+W (4931) TDM_test: Ringbuffer full, 144 bytes lost!
+[0;32mI (4931) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4941) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4941) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4951) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4951) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4961) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4961) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4971) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4971) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4981) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4981) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (4991) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (4991) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5001) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5001) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5011) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5011) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5021) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5021) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5031) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5031) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5041) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5041) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5051) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5051) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5061) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5061) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5071) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5071) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5081) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5081) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5091) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5091) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5101) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5101) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5111) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5111) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5121) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5121) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5131) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5131) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5141) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5141) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5151) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5151) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5161) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5161) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5171) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5171) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5181) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5181) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5191) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5191) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5201) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5201) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5211) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5211) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5221) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5221) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5231) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5231) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5241) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5241) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5251) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5251) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5261) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5261) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5271) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5271) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5281) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5281) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5291) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5291) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5301) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5301) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5311) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5311) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5321) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5321) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5331) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5331) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5341) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5341) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5351) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5351) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5361) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5361) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5371) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5371) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5381) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5381) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5391) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5391) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5401) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5401) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5411) TDM_test: Ringbuffer full, 144 bytes lost![0m
+[0;32mI (5411) TDM_test: Frame[0]: [0000 0000 0000 0000 0000 0000][0m
+[0;33mW (5421) TDM_test: Ringbuffer full, 144 byt
