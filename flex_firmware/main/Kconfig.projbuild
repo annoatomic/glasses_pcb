@@ -1,0 +1,17 @@
+menu "Example Configuration"
+    config EXAMPLE_WIFI_SSID
+        string "WiFi SSID"
+        default "MyHotspot"
+
+    config EXAMPLE_WIFI_PASSWORD
+        string "WiFi Password"
+        default "secret1234"
+
+    config EXAMPLE_UDP_DEST_IP
+        string "UDP destination IP"
+        default "192.168.178.41"
+
+    config EXAMPLE_UDP_DEST_PORT
+        int "UDP destination port"
+        default 7000
+endmenu

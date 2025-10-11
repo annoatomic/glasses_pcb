@@ -6743,6 +6743,54 @@
     {
         "children": [
             {
+                "children": [],
+                "depends_on": null,
+                "help": null,
+                "id": "EXAMPLE_WIFI_SSID",
+                "name": "EXAMPLE_WIFI_SSID",
+                "range": null,
+                "title": "WiFi SSID",
+                "type": "string"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": null,
+                "id": "EXAMPLE_WIFI_PASSWORD",
+                "name": "EXAMPLE_WIFI_PASSWORD",
+                "range": null,
+                "title": "WiFi Password",
+                "type": "string"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": null,
+                "id": "EXAMPLE_UDP_DEST_IP",
+                "name": "EXAMPLE_UDP_DEST_IP",
+                "range": null,
+                "title": "UDP destination IP",
+                "type": "string"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": null,
+                "id": "EXAMPLE_UDP_DEST_PORT",
+                "name": "EXAMPLE_UDP_DEST_PORT",
+                "range": null,
+                "title": "UDP destination port",
+                "type": "int"
+            }
+        ],
+        "depends_on": null,
+        "id": "example-configuration",
+        "title": "Example Configuration",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
                 "children": [
                     {
                         "children": [],

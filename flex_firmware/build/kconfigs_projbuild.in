@@ -3,3 +3,4 @@ source "C:/Users/leona/esp_container/esp-idf-v5.5/components/esp_app_format/Kcon
 source "C:/Users/leona/esp_container/esp-idf-v5.5/components/esp_rom/Kconfig.projbuild"
 source "C:/Users/leona/esp_container/esp-idf-v5.5/components/esptool_py/Kconfig.projbuild"
 source "C:/Users/leona/esp_container/esp-idf-v5.5/components/partition_table/Kconfig.projbuild"
+source "C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/main/Kconfig.projbuild"

@@ -39,16 +39,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/esp-idf/esp_hw_support/port/esp32s3/cmake_install.cmake")
+  include("C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/esp-idf/esp_hw_support/port/esp32s3/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/esp-idf/esp_hw_support/mspi_timing_tuning/port/esp32s3/cmake_install.cmake")
+  include("C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/esp-idf/esp_hw_support/mspi_timing_tuning/port/esp32s3/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/esp-idf/esp_hw_support/lowpower/cmake_install.cmake")
+  include("C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/esp-idf/esp_hw_support/lowpower/cmake_install.cmake")
 endif()
 

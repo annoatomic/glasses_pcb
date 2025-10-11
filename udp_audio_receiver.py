@@ -18,7 +18,7 @@ def parse_args():
     p = argparse.ArgumentParser(description="UDP Stereo PCM16 (LE) Receiver: Play + Plot")
     p.add_argument("--port", type=int, default=7000, help="UDP-Port zum Empfangen (default: 7000)")
     p.add_argument("--sr", type=int, default=48000, help="Samplerate (Hz) (default: 48000)")
-    p.add_argument("--prefill", type=float, default=0.5, help="Start-Puffer in Sekunden (default: 0.5)")
+    p.add_argument("--prefill", type=float, default=0, help="Start-Puffer in Sekunden (default: 0)")
     p.add_argument("--plot-sec", type=float, default=0.25, help="Plotfenster in Sekunden (default: 0.25)")
     p.add_argument("--block", type=int, default=256, help="Audio-Blockgröße (Frames) (default: 256)")
     p.add_argument("--device", type=str, default=None, help="Ausgabegerät-Name/Index (optional)")

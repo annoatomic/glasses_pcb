@@ -1885,7 +1885,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_main_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Users\leona\.espressif\tools\cmake\3.30.2\bin\cmake.exe --regenerate-during-build -SC:\Users\leona\OneDrive\SoSe25\BA\PCB\flex_firmware -BC:\Users\leona\OneDrive\SoSe25\BA\PCB\flex_firmware\build
+  command = C:\Users\leona\.espressif\tools\cmake\3.30.2\bin\cmake.exe --regenerate-during-build -SC:\Users\leona\OneDrive\WiSe25_26\BA\PCB\flex_firmware -BC:\Users\leona\OneDrive\WiSe25_26\BA\PCB\flex_firmware\build
   description = Re-running CMake...
   generator = 1
 

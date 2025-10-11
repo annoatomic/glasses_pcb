@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Users/leona/esp_container/esp-idf-v5.5/components/bootloader/s
   file(MAKE_DIRECTORY "C:/Users/leona/esp_container/esp-idf-v5.5/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/bootloader"
-  "C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/bootloader-prefix"
-  "C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/bootloader-prefix/tmp"
-  "C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/bootloader-prefix/src/bootloader-stamp"
-  "C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/bootloader-prefix/src"
-  "C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/bootloader"
+  "C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/bootloader-prefix"
+  "C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/bootloader-prefix/tmp"
+  "C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/bootloader-prefix/src"
+  "C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

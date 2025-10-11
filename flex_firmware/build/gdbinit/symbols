@@ -13,8 +13,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/bootloader/bootloader.elf
+    add-symbol-file C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/flex_firmware.elf
+file C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/flex_firmware.elf

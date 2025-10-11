@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/main
+# Install script for directory: C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

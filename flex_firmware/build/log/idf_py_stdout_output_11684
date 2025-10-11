@@ -1,6 +1,0 @@
-[0/1] Re-running CMake...
--- ccache will be used for faster recompilation
--- Building ESP-IDF components for target esp32s3
--- Configuring incomplete, errors occurred!
-FAILED: build.ninja 
-C:\Users\leona\.espressif\tools\cmake\3.30.2\bin\cmake.exe --regenerate-during-build -SC:\Users\leona\OneDrive\SoSe25\BA\PCB\flex_firmware -BC:\Users\leona\OneDrive\SoSe25\BA\PCB\flex_firmware\build

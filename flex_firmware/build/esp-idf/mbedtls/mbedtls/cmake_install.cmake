@@ -39,10 +39,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
-  include("C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
-  include("C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
-  include("C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/esp-idf/mbedtls/mbedtls/pkgconfig/cmake_install.cmake")
+  include("C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
+  include("C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
+  include("C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
+  include("C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/esp-idf/mbedtls/mbedtls/pkgconfig/cmake_install.cmake")
 
 endif()
 

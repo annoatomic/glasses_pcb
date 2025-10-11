@@ -1,4 +1,4 @@
-/* * Data converted from C:/Users/leona/OneDrive/SoSe25/BA/PCB/flex_firmware/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)
