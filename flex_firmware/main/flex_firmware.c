@@ -62,6 +62,14 @@ static const char *TAG_WIFI = "WiFi";
 #define BYTES_PER_SAMPLE      (TDM_SLOT_BITS / 8)
 #define AUDIO_FRAME_BYTES     (TDM_TOTAL_SLOTS * BYTES_PER_SAMPLE)
 
+/* ───────── Mehrkanal-Streaming ───────── */
+#define TX_NUM_CHANNELS     6  // 6 für C0..C5; auf 8 setzen, wenn Slots 6/7 aktiv
+static const uint8_t TX_SLOT_IDX[TX_NUM_CHANNELS] = {0,1,2,3,4,5}; // für 8ch: {0,1,2,3,4,5,6,7}
+
+/* UDP-Payloadgröße steuern (unter MTU bleiben) */
+#define FRAMES_PER_UDP      96 
+
+
 /* ─────────────────────────── Ringbuffer / Chunking ───────────────────────────
  * CHUNK_FRAMES * AUDIO_FRAME_BYTES = 4096 B => gute UDP-Batches ohne Fragmentierung
  * Struktur der Audiodaten:
@@ -72,10 +80,10 @@ static const char *TAG_WIFI = "WiFi";
  *   CHUNK_FRAMES (256) × AUDIO_FRAME_BYTES (16 B) = 4096 B pro Chunk
  *
  * Diese 4096 B bilden also EIN Element im Ringbuffer.
- * Der Stream-Task entnimmt daraus nur die 2 genutzten Slots (z. B. Slot 1/2 = 2 Kanäle),
- * also 2 × 2 B × 256 Frames = 1024 B reine Audio-Payload pro UDP-Paket.
+ * Der Stream-Task entnimmt daraus die TX_NUM_CHANNELS genutzten Slots (z. B. 6 Kanäle):
+ * TX_NUM_CHANNELS × 2 B × FRAMES_PER_UDP = bei 6ch und FRAMES_PER_UDP=32 → 384 B UDP-Payload.
  *
- * Damit bleibt das UDP-Paket (~1 kB) deutlich unter der typischen MTU (1500 B),
+ * Damit bleibt das UDP-Paket deutlich unter der typischen MTU (1500 B),
  * → keine IP-Fragmentierung, stabiler Stream.
  *
  * Gesamt-Ringbuffergröße:
@@ -88,14 +96,6 @@ static const char *TAG_WIFI = "WiFi";
 _Static_assert((RB_CHUNK_BYTES % AUDIO_FRAME_BYTES) == 0, "Chunk must be frame-aligned");
 _Static_assert(TDM_SLOT_BITS == 16, "Dieses Setup erwartet 16 Bit pro Slot");
 
-/* ─────────────────────────── Stream Selection ───────────────────────────
- * Wir senden nur Slot 0 & 1 als 2ch, int16 LE (je nach Verdrahtung ggf. anpassen).
- * Achtung: Dein Original las samples[base + 1] und [base + 2]. Das ist Board/IDF-abhängig.
- * Unten lassen wir’s bewusst bei 1/2 und kommentieren das klar.
- */
-#define TX_SLOTS_OUT          2U
-#define TX_LEFT_SLOT_INDEX    1U
-#define TX_RIGHT_SLOT_INDEX   2U
 
 
 /* ─────────────────────────── Globals ─────────────────────────── */
@@ -302,41 +302,37 @@ static void stream_task(void *arg) {
         .sin_addr.s_addr = inet_addr(CONFIG_UDP_DEST_IP),
     };
 
-    const size_t max_frames    = RB_CHUNK_BYTES / AUDIO_FRAME_BYTES;
-    const size_t out_max_bytes = TX_SLOTS_OUT * sizeof(int16_t) * max_frames;
-    uint8_t *out = (uint8_t *)malloc(out_max_bytes);
+    const size_t pkt_bytes     = TX_NUM_CHANNELS * sizeof(int16_t) * FRAMES_PER_UDP;
+    uint8_t *out = (uint8_t *)malloc(pkt_bytes);
+
     if (!out) { ESP_LOGE(TAG, "alloc out failed"); close(sock); vTaskDelete(NULL); }
 
-    ESP_LOGI(TAG, "stream: 2ch int16 LE -> %s:%u", CONFIG_UDP_DEST_IP, (unsigned)CONFIG_UDP_DEST_PORT);
+    ESP_LOGI(TAG, "stream: %uch int16 LE -> %s:%u", (unsigned)TX_NUM_CHANNELS, CONFIG_UDP_DEST_IP, (unsigned)CONFIG_UDP_DEST_PORT);
 
     for (;;) {
         size_t item_size = 0;
         uint8_t *data = (uint8_t *)xRingbufferReceive(g_audio_rb, &item_size, portMAX_DELAY);
         if (!data) continue;
 
-        // Achtung Endianness/Slot-Reihenfolge:
-        // Viele I2S-RX geben MSB-first pro 16-bit Wort. In deinem Original werden die 16-bit geswappt.
-        // Wir behalten das bswap16 bei. Bei abweichender I2S-Konfiguration ggf. entfernen.
         int16_t *samples = (int16_t *)data;
         size_t nframes   = item_size / AUDIO_FRAME_BYTES;
-        int16_t *out_i16 = (int16_t *)out;
 
-        for (size_t f = 0; f < nframes; ++f) {
-            size_t base = f * TDM_TOTAL_SLOTS;
+        for (size_t f0 = 0; f0 < nframes; f0 += FRAMES_PER_UDP) {
+            size_t fcount = (f0 + FRAMES_PER_UDP <= nframes) ? FRAMES_PER_UDP : (nframes - f0);
+            int16_t *out_i16 = (int16_t *)out;
 
-            int16_t l = samples[base + TX_LEFT_SLOT_INDEX];
-            int16_t r = samples[base + TX_RIGHT_SLOT_INDEX];
+            for (size_t f = 0; f < fcount; ++f) {
+                size_t base = (f0 + f) * TDM_TOTAL_SLOTS;
+                for (size_t ch = 0; ch < TX_NUM_CHANNELS; ++ch) {
+                    int16_t v = samples[base + TX_SLOT_IDX[ch]];
+                    v = bswap16(v); // falls RX MSB-first liefert – wie bisher
+                    out_i16[f * TX_NUM_CHANNELS + ch] = v; // interleaved: ch0,ch1,... pro Frame
+                }
+            }
 
-            l = bswap16(l);
-            r = bswap16(r);
-
-
-            out_i16[2 * f + 0] = l;
-            out_i16[2 * f + 1] = r;
+            size_t total = fcount * TX_NUM_CHANNELS * sizeof(int16_t);
+            (void)sendto(sock, out, total, 0, (struct sockaddr *)&dest, sizeof(dest));
         }
-
-        size_t total = nframes * TX_SLOTS_OUT * sizeof(int16_t);
-        (void)sendto(sock, out, total, 0, (struct sockaddr *)&dest, sizeof(dest));
 
         vRingbufferReturnItem(g_audio_rb, data);
     }
