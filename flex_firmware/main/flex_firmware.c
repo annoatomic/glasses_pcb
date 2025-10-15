@@ -81,7 +81,7 @@ static const uint8_t TX_SLOT_IDX[TX_NUM_CHANNELS] = {0,1,2,3,4,5}; // für 8ch: 
  *
  * Diese 4096 B bilden also EIN Element im Ringbuffer.
  * Der Stream-Task entnimmt daraus die TX_NUM_CHANNELS genutzten Slots (z. B. 6 Kanäle):
- * TX_NUM_CHANNELS × 2 B × FRAMES_PER_UDP = bei 6ch und FRAMES_PER_UDP=32 → 384 B UDP-Payload.
+ * TX_NUM_CHANNELS × 2 B × FRAMES_PER_UDP = bei 6ch und FRAMES_PER_UDP=96 → 1152 B UDP-Payload.
  *
  * Damit bleibt das UDP-Paket deutlich unter der typischen MTU (1500 B),
  * → keine IP-Fragmentierung, stabiler Stream.
@@ -292,7 +292,6 @@ static void audio_read_task(void *arg) {
 static void stream_task(void *arg) {
     (void)arg;
 
-    // UDP Ziel
     int sock = socket(AF_INET, SOCK_DGRAM, IPPROTO_IP);
     if (sock < 0) { ESP_LOGE(TAG, "socket(): %d", errno); vTaskDelete(NULL); }
 
@@ -302,9 +301,29 @@ static void stream_task(void *arg) {
         .sin_addr.s_addr = inet_addr(CONFIG_UDP_DEST_IP),
     };
 
-    const size_t pkt_bytes     = TX_NUM_CHANNELS * sizeof(int16_t) * FRAMES_PER_UDP;
-    uint8_t *out = (uint8_t *)malloc(pkt_bytes);
+    // QoS: DSCP EF -> Voice (WMM AC_VO)
+    int tos = 0xB8;  // DSCP 46 << 2
+    if (setsockopt(sock, IPPROTO_IP, IP_TOS, &tos, sizeof(tos)) < 0) {
+        ESP_LOGW(TAG, "Failed to set DSCP/TOS");
+    }
 
+    // --- Minimaler Header (8 B) ---
+    struct __attribute__((packed)) {
+        uint32_t seq;    // +1 je Paket
+        uint32_t ts48k;  // Samples in 48 kHz-Ticks
+    } header;
+
+    uint32_t seq = 0;
+    uint32_t ts48k = 0;
+
+    // Max. PCM-Bytes pro Paket (ohne Header)
+    enum { MAX_PCM_BYTES_PER_PKT = TX_NUM_CHANNELS * (int)sizeof(int16_t) * FRAMES_PER_UDP };
+
+    // Gemeinsamer TX-Puffer: Header + PCM (auf Stack ok: ~8 + 1152 B)
+    uint8_t txbuf[sizeof(header) + MAX_PCM_BYTES_PER_PKT];
+
+    const size_t pkt_bytes = MAX_PCM_BYTES_PER_PKT;  // nur zur Doku
+    uint8_t *out = (uint8_t *)malloc(pkt_bytes);
     if (!out) { ESP_LOGE(TAG, "alloc out failed"); close(sock); vTaskDelete(NULL); }
 
     ESP_LOGI(TAG, "stream: %uch int16 LE -> %s:%u", (unsigned)TX_NUM_CHANNELS, CONFIG_UDP_DEST_IP, (unsigned)CONFIG_UDP_DEST_PORT);
@@ -318,26 +337,41 @@ static void stream_task(void *arg) {
         size_t nframes   = item_size / AUDIO_FRAME_BYTES;
 
         for (size_t f0 = 0; f0 < nframes; f0 += FRAMES_PER_UDP) {
-            size_t fcount = (f0 + FRAMES_PER_UDP <= nframes) ? FRAMES_PER_UDP : (nframes - f0);
+            const size_t fcount = (f0 + FRAMES_PER_UDP <= nframes) ? FRAMES_PER_UDP : (nframes - f0);
             int16_t *out_i16 = (int16_t *)out;
 
+            // Deinterleave: nur die gewählten Slots/Kanäle
             for (size_t f = 0; f < fcount; ++f) {
                 size_t base = (f0 + f) * TDM_TOTAL_SLOTS;
                 for (size_t ch = 0; ch < TX_NUM_CHANNELS; ++ch) {
                     int16_t v = samples[base + TX_SLOT_IDX[ch]];
-                    v = bswap16(v); // falls RX MSB-first liefert – wie bisher
-                    out_i16[f * TX_NUM_CHANNELS + ch] = v; // interleaved: ch0,ch1,... pro Frame
+                    v = bswap16(v); // falls RX MSB-first liefert
+                    out_i16[f * TX_NUM_CHANNELS + ch] = v;
                 }
             }
 
-            size_t total = fcount * TX_NUM_CHANNELS * sizeof(int16_t);
-            (void)sendto(sock, out, total, 0, (struct sockaddr *)&dest, sizeof(dest));
+            const size_t pcm_bytes = fcount * TX_NUM_CHANNELS * sizeof(int16_t);
+
+            // --- Header füllen (Network Byte Order) ---
+            header.seq   = htonl(seq++);
+            header.ts48k = htonl(ts48k);
+            ts48k += (uint32_t)fcount;  // wichtig: tatsächliche Framezahl!
+
+            // --- Header + PCM zusammen senden ---
+            memcpy(txbuf, &header, sizeof(header));
+            memcpy(txbuf + sizeof(header), out, pcm_bytes);
+
+            ssize_t sent = sendto(sock, txbuf, sizeof(header) + pcm_bytes, 0, (struct sockaddr *)&dest, sizeof(dest));
+            if (sent < 0 && (errno == ENOMEM || errno == ENOBUFS || errno == EAGAIN)) {
+            vTaskDelay(pdMS_TO_TICKS(1));   
+            continue;                       
+            }
         }
 
         vRingbufferReturnItem(g_audio_rb, data);
     }
-
 }
+
 
 /* ─────────────────────────── app_main ─────────────────────────── */
 void app_main(void) {

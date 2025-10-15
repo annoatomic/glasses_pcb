@@ -13,8 +13,9 @@
 import argparse
 import socket
 import threading
-import time
 from collections import deque
+import struct
+import time
 
 import numpy as np
 import sounddevice as sd
@@ -28,7 +29,7 @@ def parse_args():
     p.add_argument("--sr", type=int, default=48000, help="Samplerate Hz (default: 48000)")
     p.add_argument("--ch", type=int, default=6, help="Empfangene Kanäle (default: 6)")
     p.add_argument("--pick", type=str, default="0,1", help="Start-Playkanäle 'L,R' (z.B. '0,1')")
-    p.add_argument("--prefill", type=float, default=0, help="Startpuffer Sekunden (default: 0)")
+    p.add_argument("--prefill", type=float, default=0.01, help="Startpuffer Sekunden (default: 0.01)")
     p.add_argument("--plot-sec", type=float, default=0.5, help="Plotfenster Sekunden (default: 0.5)")
     p.add_argument("--block", type=int, default=256, help="Audio-Blocksize Frames (default: 256)")
     p.add_argument("--device", type=str, default=None, help="Sounddevice Name/Index (optional)")
@@ -63,11 +64,20 @@ running = True
 # Für Matplotlib, damit Animation nicht vom GC zerstört wird
 _ani_ref = None
 
+# ---- RX-Telemetrie (Header seq+ts, Jitter/Loss) ----
+last_seq = None
+prev_ts48k = None
+prev_arrival = None
+jitter_rfc = 0.0
+lost_total = 0
+oo_total = 0
+
 # ---------- UDP Receiver ----------
 def udp_receiver():
-    """Empfängt UDP-Pakete (int16 LE, interleaved, RX_CHANNELS Kanäle),
+    """Empfängt UDP-Pakete (Header 8B + int16 LE interleaved, RX_CHANNELS),
        füttert raw_queue und aktualisiert den Plot-Ringpuffer."""
     global queued_frames, running
+    global last_seq, prev_ts48k, prev_arrival, jitter_rfc, lost_total, oo_total
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
@@ -77,19 +87,49 @@ def udp_receiver():
     sock.bind(("", PORT))
     print(f"[UDP] Listening on :{PORT} | expecting {RX_CHANNELS}ch int16 LE @ {SR} Hz")
 
-    recv_bytes = 0
+    recv_bytes_pcm = 0  # nur PCM, ohne 8B-Header
     last_t = time.time()
 
     while running:
         data, _ = sock.recvfrom(65536)
-        if not data:
-            continue
-        if len(data) % BYTES_PER_FRAME != 0:
-            # Paket nicht frame-aligned -> verwerfen
+        if not data or len(data) < 8:
             continue
 
-        frames = len(data) // BYTES_PER_FRAME
-        blockN = np.frombuffer(data, dtype="<i2").reshape(frames, RX_CHANNELS).copy()
+        # --- 8-Byte-Header: seq + ts48k (network order, je 32 Bit) ---
+        seq, ts48k = struct.unpack('!II', data[:8])
+        pcm = data[8:]
+
+        # Paket muss frame-aligned sein (nur PCM betrachten)
+        if len(pcm) % BYTES_PER_FRAME != 0:
+            continue
+
+        # --- Verlust / Out-of-Order zählen ---
+        if last_seq is not None:
+            expected = (last_seq + 1) & 0xFFFFFFFF
+            delta = (seq - expected) & 0xFFFFFFFF
+            if delta != 0:
+                if delta < 0x80000000:
+                    lost_total += delta    # vorwärts gesprungen: 'delta' Pakete verloren
+                else:
+                    oo_total += 1          # kleiner als erwartet: OoO
+        last_seq = seq
+
+        # --- RFC3550 Interarrival Jitter (korrekt: aufeinanderfolgende Differenzen) ---
+        arrival = time.time()
+        if prev_ts48k is None:
+            prev_ts48k = ts48k
+            prev_arrival = arrival
+        else:
+            dt_arrival = arrival - prev_arrival
+            dt_rtp = (ts48k - prev_ts48k) / SR
+            D = dt_arrival - dt_rtp
+            jitter_rfc += (abs(D) - jitter_rfc) / 16.0
+            prev_ts48k = ts48k
+            prev_arrival = arrival
+
+        # --- PCM in Frames wandeln ---
+        frames = len(pcm) // BYTES_PER_FRAME
+        blockN = np.frombuffer(pcm, dtype="<i2").reshape(frames, RX_CHANNELS).copy()
 
         with lock:
             raw_queue.append(blockN)
@@ -103,14 +143,15 @@ def udp_receiver():
                 plot_buf[:-n] = plot_buf[n:]
                 plot_buf[-n:] = blockN
 
-        # Durchsatz-Log 1x/s
-        recv_bytes += len(data)
+        # Durchsatz-Log 1x/s (PCM-only) + Telemetrie
+        recv_bytes_pcm += len(pcm)
         now = time.time()
         if now - last_t >= 1.0:
             exp = SR * BYTES_PER_FRAME
-            pct = (recv_bytes / exp * 100.0) if exp > 0 else 0.0
-            print(f"In: {recv_bytes:7d} B/s  ({pct:5.1f}% of expected)")
-            recv_bytes = 0
+            pct = (recv_bytes_pcm / exp * 100.0) if exp > 0 else 0.0
+            print(f"In: {recv_bytes_pcm:7d} B/s ({pct:5.1f}% exp) | "
+                  f"seq={last_seq} lost={lost_total} oo={oo_total} jitter~{jitter_rfc*1000:.1f} ms")
+            recv_bytes_pcm = 0
             last_t = now
 
 # ---------- Audio Writer ----------
@@ -152,8 +193,6 @@ def audio_writer():
     def callback(outdata, frames, time_info, status):
         nonlocal fifo
         if status:
-            # z.B. underflow/overflow Hinweise
-            # print(status)
             pass
         with fifo_lock:
             have = len(fifo)
@@ -161,7 +200,6 @@ def audio_writer():
                 out = fifo[:frames]
                 fifo = fifo[frames:]
             else:
-                # nicht genug -> Rest mit Stille auffüllen (verhindert Knackser)
                 out = np.zeros((frames, 2), dtype=np.int16)
                 if have > 0:
                     out[:have] = fifo
@@ -175,7 +213,6 @@ def audio_writer():
     feeder_thread = threading.Thread(target=feeder, daemon=True)
     feeder_thread.start()
 
-    import sounddevice as sd
     with sd.OutputStream(**stream_kwargs) as stream:
         print("Actual device SR:", stream.samplerate)
         while running:
@@ -214,10 +251,10 @@ def start_plot():
 
     def on_key(ev):
         global pickL, pickR, play_mode
-        if ev.key == '[':
+        if ev.key == '-':
             with lock:
                 pickL = clamp(pickL - 1)
-        elif ev.key == ']':
+        elif ev.key == '+':
             with lock:
                 pickL = clamp(pickL + 1)
         elif ev.key == ';':

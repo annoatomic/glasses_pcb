@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "flex_firmware",
-    "project_version":    "061d722-dirty",
+    "project_version":    "36a231f-dirty",
     "project_path":       "C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware",
     "idf_path":           "C:/Users/leona/esp_container/esp-idf-v5.5",
     "build_dir":          "C:/Users/leona/OneDrive/WiSe25_26/BA/PCB/flex_firmware/build",

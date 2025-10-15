@@ -1,0 +1,17 @@
+Konkreter, minimal-invasiver Umsetzungsplan (empfohlen)
+
+1. DSCP setzen (ESP32): setsockopt(IP_TOS, 0xB8) im stream_task() ergänzen. 
+
+flex_firmware
+
+2. Mini-Header einführen (seq+ts) und im Python-RX auswerten; Plot zeigt Jitter, Loss, FIFO-ms.
+
+3. Jitter-Target 30 ms mit sanfter Rate-Korrektur/Resampling im Python-Playback. 
+
+udp_audio_receiver
+
+4. A/B-Test 2 ms vs. 5 ms Paketierung und die Metriken vergleichen. 
+
+flex_firmware
+
+Wenn du magst, schreibe ich dir die Header-Erweiterung (C & Python) plus einen einfachen Drift-Regler für den Empfänger direkt passend zu euren Dateien.
